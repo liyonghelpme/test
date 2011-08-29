@@ -32,6 +32,8 @@ function initialize(){
     }
         
     dtf.home = new Home(dtf);
+    dtf.music = createaudio("dtf.mp3");
+    dtf.music.play(-1);
+    dtf.musicplay = 1;
     return -1;
 }
-test init1
