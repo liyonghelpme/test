@@ -34,3 +34,4 @@ function initialize(){
     dtf.home = new Home(dtf);
     return -1;
 }
+test init1
