@@ -104,16 +104,16 @@ class Hole{
     
     function eat(){
         stage = 2;
-        monster_node.texture(dtf.cg[28+flag*3+state],LAZY_LOAD);
+        monster_node.texture(dtf.cg[28+flag*3+state]);
         flag = flag +1;
         if(flag == 2){
-            ore_node.texture(dtf.cg[3+ores],LAZY_LOAD);
+            ore_node.texture(dtf.cg[3+ores]);
         }
         else{
             if(flag == 3){
                 disappear();
                 ores--;
-                ore_node.texture(dtf.cg[4+ores],LAZY_LOAD);
+                ore_node.texture(dtf.cg[4+ores]);
             }
         }
     }
@@ -143,18 +143,18 @@ class Hole{
         setState();
         if(hp <= 0){
             ores = last_ores;
-            ore_node.texture(dtf.cg[4+ores], 0);//LAZY_LOAD);
-            monster_node.texture(dtf.cg[37],0);//LAZY_LOAD);
+            ore_node.texture(dtf.cg[4+ores]);
+            monster_node.texture(dtf.cg[37]);
             monster_node.addaction(sequence(stop(),delaytime(2*EAT_TIME),callfunc(removeMonster)));
         }
         else{
-            monster_node.texture(dtf.cg[19+3*stage+state],LAZY_LOAD);
+            monster_node.texture(dtf.cg[19+3*stage+state]);
             if(stage == 1){
                 monster_node.addaction(sequence(stop(),delaytime(2*EAT_TIME),callfunc(removeMonster)));
             }
             else{
                 ores = last_ores;
-                ore_node.texture(dtf.cg[4+ores],LAZY_LOAD);
+                ore_node.texture(dtf.cg[4+ores]);
                 begin_eat();
             }
         }
