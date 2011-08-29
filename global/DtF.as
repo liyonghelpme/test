@@ -9,4 +9,7 @@ class DtF{
     var flev;
     var fclev;
     var best;
+    
+    var music=null;
+    var musicplay =1;
 }
