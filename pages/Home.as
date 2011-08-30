@@ -17,6 +17,7 @@ class Home{
     var fight_btn;
     var label_rank;
     var label_net = null;
+    var rank_top =null;
     
     function Home(d){
         dtf = d;
@@ -131,9 +132,13 @@ class Home{
 		}
 		
 		function rankdetail(x,y){
-				//ranklist.addsprite("menu2-fight_left.png").size(35,25).pos(x,y).setevent(EVENT_TOUCH,addrank);
-				var rank_all= ranklist.addlabel("rank aroud the world",null,20).pos(120,150).color(0,0,0);
-				
+				rank_top = ranklist.addsprite("home/rank_top.png").size(300,150).pos(50,150);
+				rank_top.addlabel("Num",null,20).pos(140,130).color(0,0,0);
+				rank_top.addlabel("X",null,8).pos(280,0).color(255,0,0).setevent(EVENT_TOUCH,delrankdetail);				
+		}
+		
+		function delrankdetail(){
+				rank_top.removefromparent();
 		}
 		
 		function f(request_id, ret_code, response_content){
