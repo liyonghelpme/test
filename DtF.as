@@ -4,6 +4,7 @@ import global.Fwr;
 import pages.Home;
 function initialize(){
     var dtf = new DtF();    
+    v_scale(800,480);
     dtf.gs = getscene();
     dtf.pt = new Pt();
     var a = Fwr.readF();

@@ -5,9 +5,6 @@ class Pt{
  
     function Pt(){
         a = screensize();   
-        trace("width:");
-        trace(str(a[0]));
-        trace(str(a[1]));
         h = 600*a[0]/800;
         h1 = a[1]-h;
         if(h1>0) h1 = 0;
