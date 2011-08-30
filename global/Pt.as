@@ -5,6 +5,9 @@ class Pt{
  
     function Pt(){
         a = screensize();   
+        trace("width:");
+        trace(str(a[0]));
+        trace(str(a[1]));
         h = 600*a[0]/800;
         h1 = a[1]-h;
         if(h1>0) h1 = 0;
@@ -21,4 +24,5 @@ class Pt{
     function paintD(fn,name,x,y,wi,he){
         return fn.addsprite(name).size(wi*a[0]/800,he*a[0]/800).pos(x*a[0]/800,y*a[0]/800 - h1);
     }
+    
 }
